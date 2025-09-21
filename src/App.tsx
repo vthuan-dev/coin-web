@@ -1,13 +1,11 @@
 import React, { useState, useReducer } from 'react'
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Container,
-  Box,
-  Snackbar,
-  Alert,
-} from '@mui/material'
+import AppBar from '@mui/material/AppBar'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
+import Container from '@mui/material/Container'
+import Box from '@mui/material/Box'
+import Snackbar from '@mui/material/Snackbar'
+import Alert from '@mui/material/Alert'
 import { PackageGrid } from './components/PackageGrid'
 import { RecipientPanel } from './components/RecipientPanel'
 import { PayBar } from './components/PayBar'

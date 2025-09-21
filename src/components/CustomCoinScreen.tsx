@@ -74,7 +74,6 @@ export const CustomCoinScreen: React.FC<CustomCoinScreenProps> = ({
           overflow: 'hidden',
         },
       }}
-      SlideComponent={Slide}
       SlideProps={{
         direction: 'up',
       }}
