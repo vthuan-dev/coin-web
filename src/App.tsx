@@ -158,12 +158,12 @@ function App() {
 
   const handleDeleteHistory = (id: string) => {
     dispatch({ type: 'DELETE_HISTORY', payload: id })
-    setSnackbar({ open: true, message: 'Đã xóa giao dịch', severity: 'success' })
+    setSnackbar({ open: true, message: 'Transaction deleted', severity: 'success' })
   }
 
   const handleClearHistory = () => {
     dispatch({ type: 'CLEAR_HISTORY' })
-    setSnackbar({ open: true, message: 'Đã xóa tất cả lịch sử', severity: 'success' })
+    setSnackbar({ open: true, message: 'All history cleared', severity: 'success' })
   }
 
   const handleCustomPackageSelect = () => {
@@ -173,10 +173,9 @@ function App() {
   const handleCustomCoinConfirm = (coins: number) => {
     dispatch({ type: 'SET_CUSTOM_COINS', payload: coins })
     setShowCustomScreen(false)
-    // Hiển thị thông báo để người dùng biết đã chọn custom coin
     setSnackbar({ 
       open: true, 
-      message: `Đã chọn ${coins.toLocaleString()} coins tùy chỉnh. Vui lòng chọn phương thức thanh toán.`, 
+      message: `Selected ${coins.toLocaleString('en-US')} custom coins. Please choose a payment method.`, 
       severity: 'success' 
     })
   }
