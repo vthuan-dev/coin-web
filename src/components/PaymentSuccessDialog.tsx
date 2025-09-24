@@ -72,7 +72,7 @@ export const PaymentSuccessDialog: React.FC<PaymentSuccessDialogProps> = ({
               WebkitTextFillColor: 'transparent',
             }}
           >
-            Thanh toán thành công!
+            Payment successful!
           </Typography>
         </Box>
       </DialogTitle>
@@ -89,14 +89,14 @@ export const PaymentSuccessDialog: React.FC<PaymentSuccessDialogProps> = ({
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
               <Receipt sx={{ color: '#4caf50' }} />
               <Typography variant="h6" fontWeight="bold" color="#4caf50">
-                Chi tiết đơn hàng
+                Order details
               </Typography>
             </Box>
 
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Typography variant="body2" color="text.secondary">
-                  Mã đơn hàng:
+                  Order ID:
                 </Typography>
                 <Typography variant="body2" fontWeight="bold" fontFamily="monospace">
                   #{orderId}
@@ -105,17 +105,17 @@ export const PaymentSuccessDialog: React.FC<PaymentSuccessDialogProps> = ({
 
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Typography variant="body2" color="text.secondary">
-                  Thời gian:
+                  Time:
                 </Typography>
                 <Typography variant="body2" fontWeight="bold">
-                  {new Date(timestamp).toLocaleString('vi-VN')}
+                  {new Date(timestamp).toLocaleString('en-US')}
                 </Typography>
               </Box>
 
               {recipient && (
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <Typography variant="body2" color="text.secondary">
-                    Người nhận:
+                    Recipient:
                   </Typography>
                   <Typography variant="body2" fontWeight="bold">
                     @{recipient}
@@ -138,11 +138,11 @@ export const PaymentSuccessDialog: React.FC<PaymentSuccessDialogProps> = ({
                     }}
                   />
                   <Typography variant="body2" color="text.secondary">
-                    Số coin:
+                    Coins:
                   </Typography>
                 </Box>
                 <Typography variant="h6" fontWeight="bold" color="primary">
-                  {coins.toLocaleString()} coins
+                  {coins.toLocaleString('en-US')} coins
                 </Typography>
               </Box>
 
@@ -150,7 +150,7 @@ export const PaymentSuccessDialog: React.FC<PaymentSuccessDialogProps> = ({
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                   <Payment sx={{ color: '#4caf50', fontSize: 20 }} />
                   <Typography variant="body2" color="text.secondary">
-                    Phương thức:
+                    Payment method:
                   </Typography>
                 </Box>
                 <Chip 
@@ -165,7 +165,7 @@ export const PaymentSuccessDialog: React.FC<PaymentSuccessDialogProps> = ({
 
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Typography variant="h6" fontWeight="bold" color="text.primary">
-                  Tổng thanh toán:
+                  Total amount:
                 </Typography>
                 <Typography 
                   variant="h5" 
@@ -209,7 +209,7 @@ export const PaymentSuccessDialog: React.FC<PaymentSuccessDialogProps> = ({
             transition: 'all 0.3s ease',
           }}
         >
-          Hoàn thành
+          Done
         </Button>
       </DialogActions>
     </Dialog>

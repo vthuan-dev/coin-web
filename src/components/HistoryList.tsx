@@ -29,7 +29,7 @@ export const HistoryList: React.FC<HistoryListProps> = ({
     return (
       <Container maxWidth="sm" sx={{ px: 2, py: 4, textAlign: 'center' }}>
         <Typography color="text.secondary">
-          Chưa có lịch sử giao dịch
+          No transaction history yet
         </Typography>
       </Container>
     )
@@ -39,14 +39,14 @@ export const HistoryList: React.FC<HistoryListProps> = ({
     <Container maxWidth="sm" sx={{ px: 2, py: 2 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
         <Typography variant="h6">
-          Lịch sử giao dịch
+          Transaction history
         </Typography>
         <Button
           size="small"
           color="error"
           onClick={onClearHistory}
         >
-          Xóa tất cả
+          Clear all
         </Button>
       </Box>
       
@@ -65,14 +65,14 @@ export const HistoryList: React.FC<HistoryListProps> = ({
               primary={
                 <Box>
                   <Typography variant="body1" fontWeight="bold">
-                    {item.type === 'recharge' ? 'Nạp Coins' : 'Gửi quà'}
+                    {item.type === 'recharge' ? 'Recharge Coins' : 'Send gift'}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    {item.recipient && `Người nhận: ${item.recipient}`}
+                    {item.recipient && `Recipient: ${item.recipient}`}
                   </Typography>
                   {item.type === 'recharge' ? (
                     <Typography variant="body2">
-                      {item.coins?.toLocaleString()} Coins - {formatCurrencyVnd(item.priceVnd || 0)}
+                      {item.coins?.toLocaleString('en-US')} Coins - {formatCurrencyVnd(item.priceVnd || 0)}
                     </Typography>
                   ) : (
                     <Typography variant="body2">
@@ -83,7 +83,7 @@ export const HistoryList: React.FC<HistoryListProps> = ({
               }
               secondary={
                 <Typography variant="caption" color="text.secondary">
-                  {new Date(item.timestamp).toLocaleString('vi-VN')}
+                  {new Date(item.timestamp).toLocaleString('en-US')}
                 </Typography>
               }
             />

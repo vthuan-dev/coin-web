@@ -206,7 +206,7 @@ export const CoinCard: React.FC<CoinCardProps> = ({
           lineHeight: 1,
         }}
       >
-        ₫{pkg.priceVnd.toLocaleString('vi-VN')}
+        ₫{pkg.priceVnd.toLocaleString('en-US')}
       </Typography>
     </Box>
   )

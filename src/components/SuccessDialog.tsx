@@ -27,37 +27,37 @@ export const SuccessDialog: React.FC<SuccessDialogProps> = ({
   return (
     <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
       <DialogTitle>
-        {historyItem.type === 'recharge' ? 'Nạp Coins thành công' : 'Gửi quà thành công'}
+        {historyItem.type === 'recharge' ? 'Coins recharged successfully' : 'Gift sent successfully'}
       </DialogTitle>
       <DialogContent>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           {historyItem.type === 'recharge' ? (
             <>
               <Typography>
-                <strong>Người nhận:</strong> {historyItem.recipient}
+                <strong>Recipient:</strong> {historyItem.recipient}
               </Typography>
               <Typography>
-                <strong>Số Coins:</strong> {historyItem.coins?.toLocaleString()}
+                <strong>Coins:</strong> {historyItem.coins?.toLocaleString('en-US')}
               </Typography>
               <Typography>
-                <strong>Giá:</strong> {formatCurrencyVnd(historyItem.priceVnd || 0)}
+                <strong>Price:</strong> {formatCurrencyVnd(historyItem.priceVnd || 0)}
               </Typography>
             </>
           ) : (
             <>
               <Typography>
-                <strong>Người nhận:</strong> {historyItem.recipient}
+                <strong>Recipient:</strong> {historyItem.recipient}
               </Typography>
               <Typography>
-                <strong>Quà tặng:</strong> {historyItem.gift}
+                <strong>Gift:</strong> {historyItem.gift}
               </Typography>
               <Typography>
-                <strong>Coins đã sử dụng:</strong> {historyItem.coins}
+                <strong>Coins used:</strong> {historyItem.coins}
               </Typography>
             </>
           )}
           <Typography color="text.secondary">
-            <strong>Thời gian:</strong> {new Date(historyItem.timestamp).toLocaleString('vi-VN')}
+            <strong>Time:</strong> {new Date(historyItem.timestamp).toLocaleString('en-US')}
           </Typography>
           {/* <Typography color="text.secondary" variant="body2">
             * Đây là mô phỏng, không có giao dịch thực tế nào được thực hiện
@@ -66,7 +66,7 @@ export const SuccessDialog: React.FC<SuccessDialogProps> = ({
       </DialogContent>
       <DialogActions>
         <Button onClick={onClose} variant="contained">
-          Đóng
+          Close
         </Button>
       </DialogActions>
     </Dialog>

@@ -63,7 +63,7 @@ export const CustomCoinInput: React.FC<CustomCoinInputProps> = ({
             WebkitTextFillColor: 'transparent',
           }}
         >
-          Nhập số coin tùy chỉnh
+          Enter custom coins
         </Typography>
         
         <TextField
@@ -71,7 +71,7 @@ export const CustomCoinInput: React.FC<CustomCoinInputProps> = ({
           type="number"
           value={inputValue}
           onChange={handleInputChange}
-          placeholder="Nhập số coin bạn muốn mua"
+          placeholder="Enter number of coins to buy"
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
@@ -121,18 +121,18 @@ export const CustomCoinInput: React.FC<CustomCoinInputProps> = ({
           >
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <Typography variant="body2" color="text.secondary">
-                Tổng số coin:
+                Total coins:
               </Typography>
               <Typography variant="h6" fontWeight="bold" color="primary">
-                {value.toLocaleString()} coins
+                {value.toLocaleString('en-US')} coins
               </Typography>
             </Box>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 1 }}>
               <Typography variant="body2" color="text.secondary">
-                Tổng tiền:
+                Total price:
               </Typography>
               <Typography variant="h6" fontWeight="bold" color="primary">
-                ₫{totalPrice.toLocaleString('vi-VN')}
+                ₫{totalPrice.toLocaleString('en-US')}
               </Typography>
             </Box>
           </Box>

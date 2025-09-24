@@ -32,10 +32,10 @@ export const GiftPanel: React.FC<GiftPanelProps> = ({
     <Container maxWidth="sm" sx={{ px: 2, py: 2 }}>
       <Box>
         <Typography variant="h6" gutterBottom>
-          Chọn quà tặng
+          Choose a gift
         </Typography>
         <Typography variant="body2" color="text.secondary" gutterBottom>
-          Số dư Coins: {coinBalance.toLocaleString()}
+          Coin balance: {coinBalance.toLocaleString('en-US')}
         </Typography>
         
         <Grid container spacing={2} sx={{ mb: 3 }}>
@@ -84,7 +84,7 @@ export const GiftPanel: React.FC<GiftPanelProps> = ({
             },
           }}
         >
-          {isProcessing ? 'Đang gửi...' : 'Gửi quà'}
+          {isProcessing ? 'Sending...' : 'Send gift'}
         </Button>
       </Box>
     </Container>

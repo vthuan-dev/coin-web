@@ -76,11 +76,11 @@ export const PaymentMethodSelector: React.FC<PaymentMethodSelectorProps> = ({
               }}
             />
             <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
-              {selectedMethodData.name}
+            {selectedMethodData.name}
             </Typography>
             {selectedMethodData.isRecommended && (
               <Chip 
-                label="Khuyến nghị" 
+                label="Recommended" 
                 size="small"
                 sx={{ 
                   backgroundColor: '#e9ecef',
@@ -93,7 +93,7 @@ export const PaymentMethodSelector: React.FC<PaymentMethodSelectorProps> = ({
             )}
           </Box>
         ) : (
-          'Chọn phương thức thanh toán'
+          'Choose payment method'
         )}
       </Button>
 
@@ -109,7 +109,7 @@ export const PaymentMethodSelector: React.FC<PaymentMethodSelectorProps> = ({
               color: '#495057',
             }}
           >
-            Phương thức thanh toán
+            Payment methods
           </Typography>
           
           <RadioGroup
@@ -186,11 +186,11 @@ export const PaymentMethodSelector: React.FC<PaymentMethodSelectorProps> = ({
                             color: '#495057',
                           }}
                         >
-                          {method.name}
+                        {method.name}
                         </Typography>
                         {method.isRecommended && (
                           <Chip 
-                            label="Khuyến nghị" 
+                            label="Recommended" 
                             size="small"
                             sx={{ 
                               backgroundColor: '#e9ecef',

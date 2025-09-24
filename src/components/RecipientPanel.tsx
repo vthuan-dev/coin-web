@@ -47,19 +47,19 @@ export const RecipientPanel: React.FC<RecipientPanelProps> = ({
             letterSpacing: '-0.02em',
           }}
         >
-          Người nhận quà
+          Gift recipient
         </Typography>
         
         <TextField
           fullWidth
           variant="outlined"
-          placeholder="Nhập tên người dùng TikTok"
+          placeholder="Enter TikTok username"
           value={recipient}
           onChange={(e) => onRecipientChange(e.target.value)}
           error={!!error}
-          helperText={error || '2-24 ký tự, chỉ chữ cái, số, dấu chấm và gạch dưới'}
+          helperText={error || '2-24 characters, letters, numbers, dots and underscores'}
           aria-invalid={!!error}
-          aria-label="Tên người dùng TikTok để gửi quà"
+          aria-label="TikTok username to send gift"
           sx={{
             '& .MuiOutlinedInput-root': {
               borderRadius: '16px !important',

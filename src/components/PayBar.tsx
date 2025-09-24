@@ -54,12 +54,12 @@ export const PayBar: React.FC<PayBarProps> = ({
               }}
             >
               <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                {customCoins > 0 ? 'Số coin tùy chỉnh' : 'Gói đã chọn'}
+                {customCoins > 0 ? 'Custom coins' : 'Selected package'}
               </Typography>
               {customCoins > 0 && (
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
                   <Typography variant="body2" color="text.primary" sx={{ fontSize: '0.875rem' }}>
-                    Bạn đã chọn số coin:
+                    You selected:
                   </Typography>
                   <Button
                     size="small"
@@ -85,7 +85,7 @@ export const PayBar: React.FC<PayBarProps> = ({
                       },
                     }}
                   >
-                    Chỉnh sửa
+                    Edit
                   </Button>
                 </Box>
               )}
@@ -97,7 +97,7 @@ export const PayBar: React.FC<PayBarProps> = ({
                   mb: 1,
                 }}
               >
-                {currentCoins.toLocaleString()} Coins
+                {currentCoins.toLocaleString('en-US')} Coins
               </Typography>
               <Typography variant="h5" fontWeight="500" color="#6c757d">
                 {formatCurrencyVnd(currentPrice)}
@@ -132,12 +132,12 @@ export const PayBar: React.FC<PayBarProps> = ({
             }}
           >
             {isProcessing 
-              ? 'Đang xử lý...' 
+              ? 'Processing...' 
               : selectedPaymentMethod === 'paypal' 
-                ? 'Thanh toán với PayPal' 
+                ? 'Pay with PayPal' 
                 : selectedPaymentMethod === 'visa'
-                  ? 'Thanh toán với Visa'
-                  : 'Chọn phương thức thanh toán'
+                  ? 'Pay with Visa'
+                  : 'Choose payment method'
             }
           </Button>
         </Box>

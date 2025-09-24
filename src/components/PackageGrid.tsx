@@ -26,7 +26,7 @@ export const PackageGrid: React.FC<PackageGridProps> = ({
           color: '#495057',
         }}
       >
-        Nhận Xu
+        Get Coins
       </Typography>
       
       <Box
